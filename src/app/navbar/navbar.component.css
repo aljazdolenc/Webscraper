@@ -1,0 +1,16 @@
+#navmenu>ul>li{
+    font-family: 'Montserrat', sans-serif;
+}
+.person-icon{
+font-size:1.7em;
+}
+.btn-purple {
+    border: 2px solid RGB(116, 47, 250);
+    font-family: 'Montserrat', sans-serif;
+    border-radius: 10px;
+    font-size: 1em;
+}
+.btn-purple:hover{
+    color:white;
+    background-color:  RGB(116, 47, 250);
+}

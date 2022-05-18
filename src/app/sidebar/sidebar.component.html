@@ -1,0 +1,119 @@
+<div class=" bg-white sidebar">
+    <!-- Top -> Logo & Close toggle -->
+    <div class="sidebar-header">
+
+        <div class="full-logo">
+            <img src="../../assets/images/Logo-web.png" class="logo-image">
+            <div>
+               <span class="logo-name">
+                   WEB<span class="violetT">SCRAPER</span>
+                </span> 
+            </div>
+        </div>
+        
+
+    <div class="btn-close">
+        <i class="bi bi-x-lg"> </i>
+    </div>
+           
+   
+
+    </div>
+<hr>
+    <!-- Side bar list -->
+    <div class="sidebar-list ps-2">  
+
+            <div 
+            class="sidebar-link"
+            (click)="activeLink='Dashboard'" 
+            [class.active]="activeLink =='Dashboard'"
+            >
+                <p class="flex">
+                    <i class="bi bi-speedometer2"></i>
+                    Dashboard
+                    <span class="notification-count">3</span>
+                </p>
+
+                
+            </div>
+
+            <div 
+            class="sidebar-link"
+            (click)="activeLink='Notifications'" 
+            [class.active]="activeLink =='Notifications'">
+                <p class="flex">
+                    <i class="bi bi-bell"></i>
+                    Notifications
+                    <span class="notification-count">1</span>
+                </p>
+            </div>
+
+            <div 
+            class="sidebar-link"
+            (click)="activeLink='Watchlist'" 
+            [class.active]="activeLink =='Watchlist'">
+                <p class="flex">
+                    <i class="bi bi-list-ul"></i>
+                    Watchlist
+                </p>
+            </div>
+
+            <div 
+            class="sidebar-link"
+            (click)="activeLink='Add'" 
+            [class.active]="activeLink =='Add'">
+                <p class="flex">
+                    <i class="bi bi-plus"></i>
+                    Add Target
+                </p>
+            </div>
+
+            <div 
+            class="sidebar-link"
+            (click)="activeLink='Account'" 
+            [class.active]="activeLink =='Account'"
+            >
+                <p class="flex">
+                    <i class="bi bi-person-circle"></i>
+                    Account
+                    <span class="notification-count">2</span>
+                </p>
+                
+            </div>
+
+            <div 
+            class="sidebar-link"
+            (click)="activeLink='Settings'" 
+            [class.active]="activeLink =='Settings'">
+                <p>
+                    <i class="bi bi-gear"></i>
+                    Settings
+                </p>
+            </div>
+
+            
+
+    </div>
+    <div class="sidebar-link logout active">
+        <p>
+            <i class="bi bi-box-arrow-right"></i>
+            Logout
+        </p>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>

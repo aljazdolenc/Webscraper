@@ -1,0 +1,98 @@
+.sidebar{
+    height:100vh;
+    position: fixed;
+    padding: 0 1rem;
+}
+/* Sidebar header */
+.sidebar-header{
+    padding-top: 1rem;
+    display: flex;
+    align-items: center;
+}
+.full-logo{
+    display: flex;
+    align-items: center;
+    justify-self: start;
+}
+.logo-image{
+    height: 2rem;
+    width: 2rem;
+    padding:0;
+    margin: 0;
+}
+.logo-name{
+    font-size: 2rem;
+}
+
+.btn-close{
+    margin-left: 2rem;
+    cursor: pointer;
+    font-size: 1.4rem;
+}
+.bi-x-lg::before{
+    display: none;
+}
+
+/* Sidebar list */
+
+.sidebar-list{
+    display: grid;
+    margin-top: 2rem;
+}
+
+/* Sidebar close */
+.sidebar-closed{
+
+
+}
+
+/* Sidebar Link */
+.sidebar-link{
+    font-size: 1.6rem;
+    height: 3rem;
+    line-height: 3rem;
+    padding-left: 1.5rem;
+    border-radius: 10px;
+    cursor: pointer;
+    margin: 0.2rem 0;
+}
+.sidebar-link .bi{
+    margin-right: 0.5rem;
+}
+
+/* Sidebar link animations */
+.sidebar-list .active{
+    background-color: rgb(241, 235, 253);
+    color: var(--color-purple);
+    padding-left: 2.3rem;
+    transition: all 200ms ease;
+}
+.sidebar-link:hover{
+    color: var(--color-purple);
+}
+.sidebar-link p:hover{
+    margin-left: 0.5rem;
+    transition: all 200ms ease;
+}
+
+/* Sidebar notification counter */
+.sidebar-link .notification-count{
+    background-color: rgb(242, 84, 111);
+    border-radius: 20%;
+    height: calc(8px + 0.7rem);
+    width: calc(0.7rem + 4px);
+    color: whitesmoke;
+    font-size: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.flex{
+    display: flex;
+}
+
+/* Logout button */
+.logout{
+    position: absolute;
+    bottom: 2rem;
+ }
