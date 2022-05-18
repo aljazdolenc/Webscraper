@@ -1,11 +1,13 @@
 .sidebar{
     height:100vh;
-    position: fixed;
+    position: relative;
     padding: 0 1rem;
+    width: 100%;
 }
 /* Sidebar header */
 .sidebar-header{
     padding-top: 1rem;
+    padding-left: 0.3rem;
     display: flex;
     align-items: center;
 }
@@ -15,19 +17,18 @@
     justify-self: start;
 }
 .logo-image{
-    height: 2rem;
-    width: 2rem;
-    padding:0;
-    margin: 0;
+    height: 1.9rem;
+    width: 1.9rem;
+
 }
 .logo-name{
-    font-size: 2rem;
+    font-size: 1.9rem;
 }
 
 .btn-close{
-    margin-left: 2rem;
+    margin-left: auto;
     cursor: pointer;
-    font-size: 1.4rem;
+    font-size: 1.2rem;
 }
 .bi-x-lg::before{
     display: none;
@@ -37,7 +38,7 @@
 
 .sidebar-list{
     display: grid;
-    margin-top: 2rem;
+    margin-top: 1.5rem;
 }
 
 /* Sidebar close */
