@@ -1,21 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+
 .navigation-bar{
-    background: #000;
+    background: var(--color-purple);
+    color: whitesmoke;
     width: 100%;
     height: 5rem;
+    padding-left: 4rem;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    font-size: 2.3rem;
+    font-family:  'Montserrat', sans-serif;
 }
-#navmenu>ul>li{
-    font-family: 'Montserrat', sans-serif;
+.mode-container{
+    position: absolute;
+    right:3rem;
+    color:grey;
+    font-size:0.6em;
+    height:2rem;
+    width: 4rem;
+    background-color: white;
+    display: flex;
+    border-radius: 17%;
+    justify-content: space-around;
+    align-items: center;
+    cursor: pointer;
 }
-.person-icon{
-font-size:1.7em;
+.mode-container .night{
+    background-color: whitesmoke;
 }
-.btn-purple {
-    border: 2px solid RGB(116, 47, 250);
-    font-family: 'Montserrat', sans-serif;
-    border-radius: 10px;
-    font-size: 1em;
+.mode-container .bi{
+    height: 102%;
+    width: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-.btn-purple:hover{
-    color:white;
-    background-color:  RGB(116, 47, 250);
+.mode-container .active-day{
+    color:yellow; 
+    border-radius: 20%;
+    background-color: rgb(206, 206, 206);  
+}
+.mode-container .active-night{
+    color: yellow;
+    border-radius: 20%;
+    background-color: rgb(38, 37, 37);  
+}
+.mode-container .active-day:not(.default){ 
+    transform-origin:right 100%;
+    transition: all 50ms ease; 
+}
+.mode-container .active-night:not(.default){
+    transform-origin:left 100%;
+    transition: all 50ms ease;  
 }

@@ -6,10 +6,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit {
-   username:string='Aljaz';
+  mode:string='day';
+  defaultMode:boolean=true;
   constructor() { }
 
   ngOnInit(): void {
+  }
+  changeMode(mode:string){
+    this.mode=mode;
+    this.defaultMode=false;
   }
 
 }
