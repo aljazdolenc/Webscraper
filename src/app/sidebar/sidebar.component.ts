@@ -1,3 +1,4 @@
+import { SidebarService } from './sidebar.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -14,7 +15,7 @@ export class SidebarComponent implements OnInit {
   //Active link
   activeLink:string='';
 
-  constructor() { }
+  constructor(private sidebarService:SidebarService) { }
 
   ngOnInit(): void {
   }
@@ -22,7 +23,5 @@ export class SidebarComponent implements OnInit {
   clickedLink(linkName:string){
     this.activeLink=linkName;
     console.log(this.activeLink)
-
   }
-
 }

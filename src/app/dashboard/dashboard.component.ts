@@ -1,4 +1,6 @@
+import { CardDeals } from './../shared/card-deals.interface';
 import { Component, OnInit } from '@angular/core';
+import { DashboardService } from './dashboard.service';
 
 @Component({
   selector: 'dashboard',
@@ -6,10 +8,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./dashboard.component.css']
 })
 export class DashboardComponent implements OnInit {
+  itemsList:CardDeals[]=[]
 
-  constructor() { }
+  constructor(private dashboardService:DashboardService) { }
 
   ngOnInit(): void {
+   this.itemsList= this.dashboardService.getItemList()
   }
 
 }

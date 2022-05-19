@@ -2,13 +2,17 @@
 
 <!-- Sidebar -->
 <div class="body-container">
-    <div class="row">
-        <div class="col-3 px-0 sidebar-container">
+    <div class="row px-0 mx-0">
+        <div 
+        class=" col-3 px-0 sidebar-container container"
+        >
          <sidebar></sidebar>
         </div>
-        <div class="col-9 px-0 content-container">
+        <div 
+        class="col px-0 content-container container-fluid"
+       >
             <navbar></navbar>
-            <dashboard></dashboard>
+           <router-outlet></router-outlet>
         </div>
     </div>
 

@@ -1,0 +1,9 @@
+.sidebar-container{
+    height: 100%;
+}
+sidebar,navbar,dashboard{
+    width: inherit;
+}
+dashboard{
+    background-color: black
+}
