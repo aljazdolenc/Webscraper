@@ -1,6 +1,7 @@
 import { CardDeals } from './../shared/card-deals.interface';
 import { Component, OnInit } from '@angular/core';
 import { DashboardService } from './dashboard.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'dashboard',
@@ -9,11 +10,14 @@ import { DashboardService } from './dashboard.service';
 })
 export class DashboardComponent implements OnInit {
   itemsList:CardDeals[]=[]
+  
 
-  constructor(private dashboardService:DashboardService) { }
+  constructor(
+    private dashboardService:DashboardService) { }
 
   ngOnInit(): void {
-   this.itemsList= this.dashboardService.getItemList()
+   this.itemsList= this.dashboardService.getItemList();
+
   }
 
 }

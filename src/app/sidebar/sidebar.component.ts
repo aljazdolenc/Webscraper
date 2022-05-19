@@ -21,7 +21,6 @@ export class SidebarComponent implements OnInit {
   }
 
   clickedLink(linkName:string){
-    this.activeLink=linkName;
-    console.log(this.activeLink)
+    this.sidebarService.updateActiveLink(linkName);
   }
 }

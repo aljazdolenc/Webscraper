@@ -6,7 +6,14 @@ const routes: Routes = [
   {path:'daily-deals', 
   loadChildren: ()=>
       import ('./dashboard/dashboard.module')
-    .then(m=>m.DashboardModule)}
+    .then(m=>m.DashboardModule)
+  },
+  {path:'notifications', 
+  loadChildren: ()=>
+      import ('./notifications/notifications.module')
+    .then(m=>m.NotificationsModule)
+  },
+
 ];
 
 @NgModule({

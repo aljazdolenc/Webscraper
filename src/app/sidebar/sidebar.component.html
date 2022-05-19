@@ -19,8 +19,9 @@
 
             <div 
             class="sidebar-link"
-            (click)="activeLink='Dashboard'" 
+            (click)="clickedLink('DAILY NEWS')" 
             [class.active]="activeLink =='Dashboard'"
+            [routerLink]="['daily-deals']"
             >
                 <p class="flex">
                     <i class="bi bi-speedometer2"></i>
@@ -33,8 +34,9 @@
 
             <div 
             class="sidebar-link"
-            (click)="activeLink='Notifications'" 
-            [class.active]="activeLink =='Notifications'">
+            (click)="clickedLink('NOTIFICATIONS')" 
+            [class.active]="activeLink =='Notifications'"
+            [routerLink]="['notifications']">
                 <p class="flex">
                     <i class="bi bi-bell"></i>
                     Notifications
@@ -44,8 +46,10 @@
 
             <div 
             class="sidebar-link"
-            (click)="activeLink='Watchlist'" 
-            [class.active]="activeLink =='Watchlist'">
+            (click)="clickedLink('WATCHLIST')" 
+            [class.active]="activeLink =='Watchlist'"
+            [routerLink]="['watchlist']"
+            >
                 <p class="flex">
                     <i class="bi bi-list-ul"></i>
                     Watchlist
@@ -54,8 +58,10 @@
 
             <div 
             class="sidebar-link"
-            (click)="activeLink='Add'" 
-            [class.active]="activeLink =='Add'">
+            (click)="clickedLink('ADD TARGET')" 
+            [class.active]="activeLink =='Add'"
+            [routerLink]="['add-new']"
+            >
                 <p class="flex">
                     <i class="bi bi-plus"></i>
                     Add Target
@@ -64,8 +70,9 @@
 
             <div 
             class="sidebar-link"
-            (click)="activeLink='Account'" 
+            (click)="clickedLink('ACCOUNT')" 
             [class.active]="activeLink =='Account'"
+            [routerLink]="['account']"
             >
                 <p class="flex">
                     <i class="bi bi-person-circle"></i>
@@ -77,8 +84,9 @@
 
             <div 
             class="sidebar-link"
-            (click)="activeLink='Settings'" 
-            [class.active]="activeLink =='Settings'">
+            (click)="clickedLink('SETTINGS')" 
+            [class.active]="activeLink =='Settings'"
+            [routerLink]="['settings']">
                 <p>
                     <i class="bi bi-gear"></i>
                     Settings
