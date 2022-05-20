@@ -9,9 +9,13 @@ import { SidebarService } from '../sidebar/sidebar.service';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit, OnDestroy {
+  //Dark Light mode variable
   mode: string = 'day';
+  
   defaultMode: boolean = true;
   headingText: string;
+
+  //Subscriptions
   headingSub: Subscription;
 
   constructor(private sidebarService: SidebarService) { }
@@ -21,7 +25,11 @@ export class NavbarComponent implements OnInit, OnDestroy {
 
     this.headingSub = this.sidebarService.activeLink
       .subscribe((heading:string) => {
-        this.headingText= heading
+        if(heading){
+          this.headingText= heading
+        }else{
+          this.sidebarService.updateLinkLS()
+        }
       })
     console.log(this.headingText)
 
@@ -30,7 +38,6 @@ export class NavbarComponent implements OnInit, OnDestroy {
     this.mode = mode;
     this.defaultMode = false;
   }
-
 
 
   ngOnDestroy(): void {

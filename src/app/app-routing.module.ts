@@ -13,6 +13,11 @@ const routes: Routes = [
       import ('./notifications/notifications.module')
     .then(m=>m.NotificationsModule)
   },
+  {path:'watchlist',
+  loadChildren:()=>
+    import ('./watchlist/watchlist.module')
+    .then(m=>m.WatchlistModule)
+  }
 
 ];
 

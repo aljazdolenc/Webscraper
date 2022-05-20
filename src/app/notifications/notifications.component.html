@@ -1,1 +1,51 @@
-<p>notifications works!</p>
+<div class="container pt-3">
+    <div class="list-group">
+        <div class="list-group-item menu-bar">
+            <div class="all-btn-container">
+                <div class="refresh-btn text-center p-2 ">
+                    <i class="bi bi-arrow-clockwise"></i>
+                    Refresh
+                </div>
+                <div class="delete-all-btn p-2 text-center ms-1">
+                    <i class="bi bi-trash3"></i>
+                    Delete All
+                </div>
+            </div>
+
+        </div>
+
+        <div class="list-group-item my-2" aria-current="true"
+            *ngFor="let notification of notificationsList">
+            <div class="item-cont">
+                <div class=" imageContainer pe-2">
+                    <img [src]="notification.item.imageUrl" alt="" class="notification-image">
+                </div>
+
+
+                <div class="container-fluid p-0 ps-2 content-cont">
+                    <div class="d-flex w-100 justify-content-between">
+                        <h5 class="mb-1">{{notification.item.name}}</h5>
+                        <small>{{notification.time}}</small>
+                    </div>
+
+                    <p class="mb-1"></p>
+                    <small>Price: {{notification.item.price}}</small>
+
+                    <a [href]="notification.item.itemUrl" class="btn-buy text-center mx-3">
+                        <i class="bi bi-caret-right pe-1"></i>
+                        VISIT LINK</a>
+
+                    <div class="option-container">
+                        <i class="bi bi-trash3"></i>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+
+
+
+    </div>
+</div>

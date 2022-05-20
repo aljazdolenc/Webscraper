@@ -1,0 +1,24 @@
+.card-header{
+    display: grid;
+    justify-content: space-between;
+}
+.watchlist-header{
+    font-family:  'Montserrat', sans-serif;
+}
+.item-search{
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+.parameters{
+    font-size: 0.7rem;
+}
+
+.actions-container{
+    position: absolute;
+    right: 1rem;
+    font-size: 1.1rem;
+}
+.actions-container i{
+    cursor: pointer;
+}
+

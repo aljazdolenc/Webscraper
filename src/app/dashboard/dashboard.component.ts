@@ -1,8 +1,6 @@
 import { CardDeals } from './../shared/card-deals.interface';
 import { Component, OnInit } from '@angular/core';
 import { DashboardService } from './dashboard.service';
-import { ActivatedRoute } from '@angular/router';
-
 @Component({
   selector: 'dashboard',
   templateUrl: './dashboard.component.html',

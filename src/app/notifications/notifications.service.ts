@@ -18,4 +18,8 @@ export class NotificationsService {
         })
         console.log(this.notificationsArray)
     }
+
+    getNotificationsList(){
+        return this.notificationsArray.slice()
+    }
 }

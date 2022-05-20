@@ -19,8 +19,8 @@
 
             <div 
             class="sidebar-link"
-            (click)="clickedLink('DAILY NEWS')" 
-            [class.active]="activeLink =='Dashboard'"
+            (click)="clickedLink('DAILY DEALS')" 
+            [class.active]="activeLink =='DAILY DEALS'"
             [routerLink]="['daily-deals']"
             >
                 <p class="flex">
@@ -35,7 +35,7 @@
             <div 
             class="sidebar-link"
             (click)="clickedLink('NOTIFICATIONS')" 
-            [class.active]="activeLink =='Notifications'"
+            [class.active]="activeLink =='NOTIFICATIONS'"
             [routerLink]="['notifications']">
                 <p class="flex">
                     <i class="bi bi-bell"></i>
@@ -47,7 +47,7 @@
             <div 
             class="sidebar-link"
             (click)="clickedLink('WATCHLIST')" 
-            [class.active]="activeLink =='Watchlist'"
+            [class.active]="activeLink =='WATCHLIST'"
             [routerLink]="['watchlist']"
             >
                 <p class="flex">
@@ -59,7 +59,7 @@
             <div 
             class="sidebar-link"
             (click)="clickedLink('ADD TARGET')" 
-            [class.active]="activeLink =='Add'"
+            [class.active]="activeLink =='ADD TARGET'"
             [routerLink]="['add-new']"
             >
                 <p class="flex">
@@ -71,21 +71,20 @@
             <div 
             class="sidebar-link"
             (click)="clickedLink('ACCOUNT')" 
-            [class.active]="activeLink =='Account'"
+            [class.active]="activeLink =='ACCOUNT'"
             [routerLink]="['account']"
             >
                 <p class="flex">
                     <i class="bi bi-person-circle"></i>
                     Account
                     <span class="notification-count">2</span>
-                </p>
-                
+                </p>        
             </div>
 
             <div 
             class="sidebar-link"
             (click)="clickedLink('SETTINGS')" 
-            [class.active]="activeLink =='Settings'"
+            [class.active]="activeLink =='SETTINGS'"
             [routerLink]="['settings']">
                 <p>
                     <i class="bi bi-gear"></i>

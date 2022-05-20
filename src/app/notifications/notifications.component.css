@@ -1,0 +1,77 @@
+
+.list-group-item{
+    height:8rem;
+    position: relative;
+}
+
+.menu-bar{
+    height: 4rem;
+    position: relative;
+    
+}
+.all-btn-container{
+    position: absolute;
+    right:1rem;
+    bottom:0.5rem;
+    display: flex;
+    align-items: center;
+
+}
+.all-btn-container div{
+    border-radius: 10%;
+    cursor: pointer;
+}
+.refresh-btn:hover{
+    background-color: rgba(73, 206, 255, 0.607);
+
+}
+.delete-all-btn:hover{
+    background-color: rgba(255, 0, 0, 0.607);
+
+}
+
+
+.option-container{
+    cursor: pointer;
+    position: absolute;
+    right:1.5rem;
+    font-size: 1.2rem;
+}
+.option-container i{
+    padding: 0 0.3rem;
+}
+.notification-image{
+    height: 100%;
+    width: auto;
+}
+.row{
+    height:8rem;
+}
+.imageContainer{
+    height:6rem;
+    display: flex;
+    width: auto;
+}
+.item-cont{
+    display:flex;
+    justify-content: space-between;
+}
+.btn-buy{
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+    color: black;
+    background-color:var(--color-green);
+    border-radius: 5%;
+    position: absolute;
+    left: 0.1rem;
+    bottom:0.5rem;
+    font-size: 1rem;
+    min-width: 8rem;
+    transition: all 200ms ease;
+}
+.btn-buy:hover{
+transform: scale(1.05);
+}
+.content-cont{
+    position: relative;
+}
