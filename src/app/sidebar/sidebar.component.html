@@ -46,39 +46,26 @@
 
             <div 
             class="sidebar-link"
-            (click)="clickedLink('WATCHLIST')" 
-            [class.active]="activeLink =='WATCHLIST'"
-            [routerLink]="['watchlist']"
+            (click)="clickedLink('WATCHLISTS')" 
+            [class.active]="activeLink =='WATCHLISTS'"
+            [routerLink]="['watchlists']"
             >
                 <p class="flex">
                     <i class="bi bi-list-ul"></i>
-                    Watchlist
+                    Watchlists
                 </p>
             </div>
 
             <div 
             class="sidebar-link"
-            (click)="clickedLink('ADD TARGET')" 
-            [class.active]="activeLink =='ADD TARGET'"
-            [routerLink]="['add-new']"
+            (click)="clickedLink('ADD WATCHLIST')" 
+            [class.active]="activeLink =='ADD WATCHLIST'"
+            [routerLink]="['add-watchlist']"
             >
                 <p class="flex">
-                    <i class="bi bi-plus"></i>
+                    <i class="bi bi-plus-lg"></i>
                     Add Target
                 </p>
-            </div>
-
-            <div 
-            class="sidebar-link"
-            (click)="clickedLink('ACCOUNT')" 
-            [class.active]="activeLink =='ACCOUNT'"
-            [routerLink]="['account']"
-            >
-                <p class="flex">
-                    <i class="bi bi-person-circle"></i>
-                    Account
-                    <span class="notification-count">2</span>
-                </p>        
             </div>
 
             <div 

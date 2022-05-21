@@ -10,7 +10,7 @@
     font-size: 1.2rem;
 }
 .parameters{
-    font-size: 0.7rem;
+    font-size: 0.65rem;
 }
 
 .actions-container{
@@ -20,5 +20,52 @@
 }
 .actions-container i{
     cursor: pointer;
+    transition: all 200ms;
+}
+.actions-container i:hover{
+   font-size: 1.3rem;
 }
 
+.card-title{
+    font-size: 0.85rem;
+}
+.card-text{
+    font-size: 0.75rem;
+}
+
+.btn-all{
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+    color: black;
+    border-radius: 7px;
+    font-size: 0.7rem;
+    border: 1px solid black;
+    transition: all 50ms;
+}
+.btn-all:hover{
+    transform: scale(1.03);
+
+}
+
+.card-watchlist:hover {
+    box-shadow: 0 0 11px rgba(33,33,33,.3); 
+  }
+
+  .btn-visit{
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+    color: black;
+    border-radius: 7px;
+    font-size: 0.7rem;
+    border: 1px solid black;
+    transition: all 50ms; 
+    max-width: fit-content;
+    margin: 0 auto;
+  }
+  .btn-visit:hover{
+      background-color: black;
+      color: white;
+  }
+  .card-body{
+      display: grid;
+  }

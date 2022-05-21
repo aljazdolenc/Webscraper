@@ -1,0 +1,26 @@
+.container{
+    width: 80%;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.7);
+    box-shadow: 0 0 11px rgba(33,33,33,.3); 
+    position: relative;
+}
+
+
+.min-container, .max-container{
+    width: 5rem;
+}
+.min, .max{
+    width: 5rem;
+}
+.btn-primary{
+    position: absolute;
+    right: 2rem;
+    bottom:1.5rem;
+}
+.bold{
+    font-weight: bold;
+}
+.text-small{
+    font-size: 0.9rem;
+}
