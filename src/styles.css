@@ -1,13 +1,7 @@
 @import "~bootstrap/dist/css/bootstrap.css";
 @import "~bootstrap-icons/font/bootstrap-icons.css";
-:root{
-    --color-purple:RGB(116, 47, 250);
-    --color-green:#00fd61;
-    --color-black: #000000;
-}
-.violetT{
-    color:var(--color-purple);
-}
+
+
 .greenT{
     color:var(--color-green);
 }
@@ -17,6 +11,37 @@
 
 body{
     background-color: rgb(242, 242, 242);
+    --color-purple:rgb(116, 47, 250);
+    --color-green:#00fd61;
+    --color-black: #000000;
+
+    --color-text: black;
+    /*Sidebar colors*/
+    --color-scrapy:rgb(116, 47, 250);
+    --color-sidebar-bg:white;
+    --color-sidebar-links:black;
+    --color-sidebar-links-active:rgb(116, 47, 250);
+    --color-sidebar-links-active-bg:rgb(241, 235, 253);
+    --color-notification-icon-text:rgb(245,245,245);
+    --color-notification-icon-bg:rgb(242, 84, 111);
+    /* Navbar colors */
+    --color-navbar-bg:#00fd61;
+    --color-navbar-header:black;
+    
+}
+body.dark-theme{
+    background-color:rgba(41, 32, 89);
+    --color-text:white;
+    /*Sidebar colors*/
+    --color-scrapy:rgb(235, 67, 215);
+    --color-sidebar-bg:linear-gradient(to bottom right,RGB(47, 10, 103),rgb(84, 41, 148));
+    --color-sidebar-links: white;
+    --color-sidebar-links-active:rgb(235, 67, 215);
+    --color-sidebar-links-active-bg:rgb(251, 217, 247);
+    --color-notification-icon-bg:#f6808e;
+    /* Navbar colors */
+    --color-navbar-header:white;
+    --color-navbar-bg:;
 }
 .body-container{
     height: 100vh;

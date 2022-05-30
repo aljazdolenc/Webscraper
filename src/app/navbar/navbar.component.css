@@ -1,7 +1,7 @@
 
 .navigation-bar{
-    background: var(--color-green);
-    color: black;
+    background: var(--color-navbar-bg);
+    color: var(--color-navbar-header);
     width: 100%;
     height: 5rem;
     display: flex;

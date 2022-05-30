@@ -3,13 +3,27 @@
     <form>
         <!-- Search Parameters -->
         <div class="form-group pt-2 pb-4">
-            <label for="formGroupInput"> <span class="bold">Update Password</span> </label>
-            <input type="text" class="form-control mt-2" id="formGroupInput" placeholder='"Current password"'>
-            <input type="text" class="form-control mt-2" id="formGroupInput" placeholder='"New password"'>
-            <input type="text" class="form-control mt-2" id="formGroupInput" placeholder='"Re-enter new password"'>
+            <label for="formGroupInput">
+                <span class="bold mb-5">Update Password</span>
+            </label>
+       <br>
+            <form class="mt-2">
+                <small class="text-muted">Current password</small>
+                <input type="text" class="form-control mt-1" id="formGroupInput">
+    
+                <small class="text-muted">New password</small>
+                <input type="text" class="form-control mt-1" id="formGroupInput">
+    
+                <small class="text-muted">Re-enter new password</small>
+                <input type="text" class="form-control mt-1" id="formGroupInput">
+
+
+
+
+            </form>
         </div>
 
-       
+
         <!-- Notifications -->
         <div class="form-group">
             <label class="bold pb-2">Notification preferences</label>
@@ -20,9 +34,9 @@
             <div class="form-check">
                 <input class="form-check-input position-static" type="checkbox" id="blankCheckbox" value="option1"
                     aria-label="..."> <span class="text-small">
-                        Browser Notifications
-                    </span> 
-            </div>            
+                    Browser Notifications
+                </span>
+            </div>
         </div>
 
         <!-- Button Submit -->

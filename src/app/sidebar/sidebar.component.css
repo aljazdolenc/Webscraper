@@ -4,6 +4,7 @@
     padding: 0 1rem;
     width:inherit;
     overflow: hidden;
+    background: var(--color-sidebar-bg);
 }
 /* Sidebar header */
 .sidebar-header{
@@ -23,10 +24,13 @@
     width: 2rem;
     margin-right: 1rem;
     margin-left: 1rem;
-
 }
 .logo-name{
     font-size: 1.9rem;
+    color:var(--color-text)
+}
+.scrapy{
+    color: var(--color-scrapy);
 }
 
 .btn-close{
@@ -46,10 +50,7 @@
 }
 
 /* Sidebar close */
-.sidebar-closed{
 
-
-}
 
 /* Sidebar Link */
 .sidebar-link{
@@ -60,6 +61,7 @@
     border-radius: 10px;
     cursor: pointer;
     margin: 0.2rem 0;
+    color:var(--color-sidebar-links);
 }
 .sidebar-link .bi{
     margin-right: 1.3rem;
@@ -67,13 +69,13 @@
 
 /* Sidebar link animations */
 .sidebar-list .active{
-    background-color: rgb(241, 235, 253);
-    color: var(--color-purple);
+    background-color: var(--color-sidebar-links-active-bg);
+    color: var(--color-sidebar-links-active);
     margin-left: -0.7rem;
     transition: all 200ms ease;
 }
 .sidebar-link:hover{
-    color: var(--color-purple);
+    color: var(--color-sidebar-links-active);
 }
 .sidebar-link p:hover{
     margin-left: -0.5rem;
@@ -82,11 +84,11 @@
 
 /* Sidebar notification counter */
 .sidebar-link .notification-count{
-    background-color: rgb(242, 84, 111);
+    background-color: var(--color-notification-icon-bg);
     border-radius: 20%;
     height: calc(8px + 0.7rem);
     width: calc(0.7rem + 4px);
-    color: whitesmoke;
+    color: var(--color-notification-icon-text);
     font-size: 0.7rem;
     display: flex;
     align-items: center;

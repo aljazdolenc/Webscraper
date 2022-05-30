@@ -23,6 +23,7 @@ export class NavbarComponent implements OnInit, OnDestroy {
 
   ngOnInit(): void {
 
+    this.checkMode()
     this.headingSub = this.sidebarService.activeLink
       .subscribe((heading:string) => {
         if(heading){
@@ -31,14 +32,23 @@ export class NavbarComponent implements OnInit, OnDestroy {
           this.sidebarService.updateLinkLS()
         }
       })
-    console.log(this.headingText)
 
   }
+
   changeMode(mode: string) {
-    this.mode = mode;
-    this.defaultMode = false;
+    if(this.mode!==mode){
+      this.mode = mode;
+      this.defaultMode = false;
+      localStorage.setItem('nightMode',mode)
+      document.body.classList.toggle('dark-theme');
+    }
   }
-
+  checkMode(){
+    const storedMode= localStorage.getItem('nightMode')
+    if(storedMode==='night'){
+      document.body.classList.toggle('dark-theme');
+    }
+  }
 
   ngOnDestroy(): void {
     this.headingSub.unsubscribe()

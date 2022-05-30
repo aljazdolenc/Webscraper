@@ -1,107 +1,79 @@
-<div class=" bg-white sidebar">
+<div class=" sidebar">
     <!-- Top -> Logo & Close toggle -->
     <div class="sidebar-header">
 
         <div class="full-logo">
             <img src="../../assets/images/Logo-web.png" class="logo-image">
             <div>
-               <span class="logo-name">
-                   WEB<span class="violetT">SCRAPY</span>
-                </span> 
+                <span class="logo-name">
+                    WEB<span class="scrapy">SCRAPY</span>
+                </span>
             </div>
         </div>
+
     </div>
 
-<hr>
+    <hr>
 
     <!-- Side bar list -->
-    <div class="sidebar-list ps-2">  
+    <div class="sidebar-list ps-2">
 
-            <div 
-            class="sidebar-link"
-            (click)="clickedLink('DAILY DEALS')" 
-            [class.active]="activeLink =='DAILY DEALS'"
-            [routerLink]="['daily-deals']"
-            >
-                <p class="flex">
-                    <i class="bi bi-speedometer2"></i>
-                    Dashboard
-                    <span class="notification-count">3</span>
-                </p>
+        <!-- Dashboard sidebar link -->
+        <div class="sidebar-link" (click)="clickedLink('DAILY DEALS')" [class.active]="activeLink =='DAILY DEALS'"
+            [routerLink]="['daily-deals']">
+            <p class="flex">
+                <i class="bi bi-speedometer2"></i>
+                Dashboard
+                <span class="notification-count">3</span>
+            </p>
+        </div>
 
-                
-            </div>
-
-            <div 
-            class="sidebar-link"
-            (click)="clickedLink('NOTIFICATIONS')" 
-            [class.active]="activeLink =='NOTIFICATIONS'"
+        <!-- Notifications sidebar link -->
+        <div class="sidebar-link" (click)="clickedLink('NOTIFICATIONS')" [class.active]="activeLink =='NOTIFICATIONS'"
             [routerLink]="['notifications']">
-                <p class="flex">
-                    <i class="bi bi-bell"></i>
-                    Notifications
-                    <span class="notification-count">1</span>
-                </p>
-            </div>
+            <p class="flex">
+                <i class="bi bi-bell"></i>
+                Notifications
+                <span class="notification-count">1</span>
+            </p>
+        </div>
 
-            <div 
-            class="sidebar-link"
-            (click)="clickedLink('WATCHLISTS')" 
-            [class.active]="activeLink =='WATCHLISTS'"
-            [routerLink]="['watchlists']"
-            >
-                <p class="flex">
-                    <i class="bi bi-list-ul"></i>
-                    Watchlists
-                </p>
-            </div>
+        <!-- Watchlist sidebar link -->
+        <div class="sidebar-link" (click)="clickedLink('WATCHLISTS')" [class.active]="activeLink =='WATCHLISTS'"
+            [routerLink]="['watchlists']">
+            <p class="flex">
+                <i class="bi bi-list-ul"></i>
+                Watchlists
+            </p>
+        </div>
 
-            <div 
-            class="sidebar-link"
-            (click)="clickedLink('ADD WATCHLIST')" 
-            [class.active]="activeLink =='ADD WATCHLIST'"
-            [routerLink]="['add-watchlist']"
-            >
-                <p class="flex">
-                    <i class="bi bi-plus-lg"></i>
-                    Add Target
-                </p>
-            </div>
+        <!-- Add watchlist sidebar link -->
+        <div class="sidebar-link" (click)="clickedLink('ADD WATCHLIST')" [class.active]="activeLink =='ADD WATCHLIST'"
+            [routerLink]="['add-watchlist']">
+            <p class="flex">
+                <i class="bi bi-plus-lg"></i>
+                Add Target
+            </p>
+        </div>
 
-            <div 
-            class="sidebar-link"
-            (click)="clickedLink('SETTINGS')" 
-            [class.active]="activeLink =='SETTINGS'"
+        <!-- Settings sidebar link -->
+        <div class="sidebar-link" (click)="clickedLink('SETTINGS')" [class.active]="activeLink =='SETTINGS'"
             [routerLink]="['settings']">
-                <p>
-                    <i class="bi bi-gear"></i>
-                    Settings
-                </p>
-            </div>
+            <p>
+                <i class="bi bi-gear"></i>
+                Settings
+            </p>
+        </div>
 
-            
+
 
     </div>
-    <div class="sidebar-link logout active">
+    <!-- Logout sidebar link -->
+    <div class="sidebar-link logout">
         <p>
             <i class="bi bi-box-arrow-right"></i>
             Logout
         </p>
     </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 </div>
