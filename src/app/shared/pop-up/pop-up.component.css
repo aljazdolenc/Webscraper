@@ -1,0 +1,96 @@
+/* Snackbar */
+#snackbar {
+  display: none;
+  min-width: 15.625rem;
+  max-width: 18.75rem;
+  text-align: center;
+  border-radius: 0.4375rem;
+  padding: 1rem;
+  position: fixed;
+  z-index: 10;
+  right: 3%;
+  bottom: 30px;
+  font-size: 1.5rem;
+  border-left: 0.4rem solid;
+  box-shadow: 0 1px 1px rgba(0,0,0,0.12),
+  0 2px 2px rgba(0,0,0,0.12),
+  0 4px 4px rgba(0,0,0,0.12),
+  0 8px 8px rgba(0,0,0,0.12),
+  0 16px 16px rgba(0,0,0,0.12);
+}
+#snackbar.show {
+  display: block;
+  animation: fadein 1s linear;
+}
+#snackbar.hide {
+  display: block;
+  animation: fadeout 1s linear;
+}
+
+/* Icons */
+.icon{
+  position: absolute;
+  left:7%;
+  top:calc((1rem * 2 + 1.5rem - 1.5rem)/2);
+  margin: auto 0;
+  font-size: 1.5rem;
+}
+.close-icon{
+  position: absolute;
+  right:5%;
+  top: 5%;
+  cursor: pointer;
+}
+.close-icon:hover{
+  -webkit-text-stroke: 0.5px;
+}
+
+/* Success */
+.success{
+  border-left-color: rgb(49, 209, 111) !important;
+  background-color: rgb(230, 255, 230);
+  color: rgba(0, 0, 0, 0.737);
+
+}
+.success .icon{
+  color: rgb(49, 209, 111);
+}
+
+/* Error */
+.error{
+  border-color:  rgb(237, 64, 100) !important;
+  background-color: rgb(255,196, 232);
+  color: rgba(0, 0, 0, 0.737);
+}
+.error .icon{
+  color: rgb(225, 54, 90);
+}
+
+/* Warning */
+.warning{
+  border-left-color:rgb(245, 221, 125)  !important;
+  background-color: rgb(255, 255, 230);
+  color: rgba(0, 0, 0, 0.737);
+}
+.warning .icon{
+  color: rgb(235, 211, 115);
+}
+
+/* Animations */
+@keyframes fadein {
+  from {
+    right: 0;
+    opacity: 0.1;}
+  to {
+
+    right: 3%;
+    opacity: 1;}
+}
+@keyframes fadeout {
+  from {
+    right: 3%;
+    opacity: 1;}
+  to {
+    right: 0;
+    opacity: 0.1;}
+}

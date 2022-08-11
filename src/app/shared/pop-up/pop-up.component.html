@@ -1,0 +1,15 @@
+<div id="snackbar"
+[class.show]="popUpMessage"
+[class.hide]="hidePopUp"
+[class]="popUpType">
+
+<i class="bi bi-x close-icon" (click)="closePopUp()"></i>
+
+<i *ngIf="popUpType === 'success'" class="icon bi bi-check-circle"></i>
+
+<i *ngIf="popUpType === 'error'" class="icon bi bi-x-circle"></i>
+
+<i *ngIf="popUpType === 'warning'" class="icon bi bi-exclamation-triangle"></i>
+<span>{{popUpMessage}}</span>
+
+</div>

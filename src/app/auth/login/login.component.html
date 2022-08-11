@@ -1,0 +1,46 @@
+
+
+
+              <p class="welcome-message mb-3 mt-3">New to WebScrapy? <span class="signup" routerLink="../signup">Sign up</span></p>
+
+
+              <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="login-form my-3">
+
+                  <div class="form-control">
+                      <input
+                      formControlName="email"
+                      type="email"
+                      placeholder="Email">
+                      <i class="bi bi-person-fill"></i>
+                  </div>
+                  <p class="error-message ps-4 mt-1 mb-2"
+                  [ngClass]="invalidEmail()?'visible':'hidden'">
+                    <span *ngIf="this.loginForm.get('email').hasError('required')">Email is required</span>
+                    <span *ngIf="this.loginForm.get('email').hasError('email')">Email is invalid</span>.
+                  </p>
+
+                  <div class="form-control">
+                      <input
+                      type="password"
+                      formControlName="password"
+                      placeholder="Password">
+                      <i class="bi bi-lock-fill"></i>
+                  </div>
+                  <p class="error-message ps-4 mt-1 mb-2"
+                  [ngClass]="invalidPassword()?'visible':'hidden'">
+                    Password must contain at least 8 characters.
+                  </p>
+
+                  <button
+                  type="submit"
+                  class="submit mb-2 mt-4"
+                  *ngIf="!isLoading;else spinner">Login</button>
+                  <ng-template #spinner class="spinner-wrap" >
+                    <spinner ></spinner>
+                  </ng-template>
+
+                  <p
+                  class="forgot-password mb-2 mt-4"
+                  routerLink="../forgot-password">
+                  <i class="bi bi-lock-fill me-1"></i>Forgot your password?</p>
+              </form>

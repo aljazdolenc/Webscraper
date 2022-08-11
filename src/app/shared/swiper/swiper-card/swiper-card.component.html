@@ -1,0 +1,12 @@
+<div class="card" >
+  <img [src]="item.imageUrl" class="card-img-top" alt="...">
+  <hr class="mt-0">
+  <div class="card-body">
+    <h5
+    class="card-title">{{item.name}}</h5>
+    <p class="card-text text-center">{{item.price}}$</p>
+    <a
+    [href]="item.itemUrl"
+    class="btn-buy text-center py-1 mx-3 mb-3">BUY NOW</a>
+  </div>
+</div>

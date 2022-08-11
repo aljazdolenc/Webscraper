@@ -1,0 +1,122 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+  /* box-sizing: border-box;
+  outline: 1px solid limegreen !important; */
+}
+
+.welcome-message {
+  text-align: center;
+  font-size: 0.9rem;
+  line-height: 1.2rem;
+  color: #c8ccd5;
+}
+.signup{
+  color: #15a0e1c7;
+  cursor: pointer;
+
+}
+.signup:hover{
+  color: #8b33c5;
+}
+
+.login-form {
+  width: 100%;
+  max-height: 20rem;
+  min-height: 40vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.form-control {
+  width: 100%;
+  position: relative;
+  background-color: transparent;
+  border-radius: 1.875rem;
+  border: .125rem solid #000;
+  box-shadow: 0 .25rem .5rem 0 rgba(0,0,0,0.4);
+}
+input:hover{
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.8);
+
+}
+input,
+button {
+  border: none;
+  outline: none;
+  border-radius: 1.5rem;
+  font-size: 1em;
+}
+
+input {
+  width: 100%;
+  background: #e6e6e6;
+  color: #333;
+  letter-spacing: .0313rem;
+  padding: .65rem 3.5rem;
+}
+
+input ~ i {
+  position: absolute;
+  left: 1.6rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #888;
+  transition: color   0.4s;
+}
+.input-error{
+font-size: 0.8em;
+height:0.8em
+}
+input:focus ~ i {
+  color: #843bc7;
+}
+form p{
+  font-size: 0.8rem;
+  color: white;
+}
+.error-message{
+  font-size: 0.8rem;
+}
+.visible{
+  visibility: visible;
+}
+.hidden{
+  visibility: hidden;
+}
+button.submit {
+  color: #fff;
+  padding: .6875rem 3.25rem;
+  margin: 1rem auto;
+  text-transform: uppercase;
+  letter-spacing: .0875rem;
+  font-weight: bold;
+  background-image: linear-gradient(to right, #8b33c5, #15a0e1);
+  cursor: pointer;
+  opacity: 0.9;
+  transition: opacity 0.4s;
+  font-size: 1.2em;
+}
+
+button.submit:hover {
+  opacity: 1;
+}
+.forgot-password{
+  cursor: pointer;
+  margin: auto;
+}
+.forgot-password:hover{
+color:#ca97fa
+}
+
+spinner{
+margin-top:1.8375rem !important;
+margin-bottom: 0.8375rem !important;
+height: 2.5rem;
+width: 2.5rem;
+margin: auto;
+}
+
+

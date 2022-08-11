@@ -1,0 +1,53 @@
+<p class="welcome-message mb-3 mt-3"> Already have an account? <span class="signup" routerLink="../login">Login</span></p>
+
+<form [formGroup]="signupForm" (ngSubmit)="onSubmit()" class="login-form my-3">
+
+  <div class="form-control">
+    <input
+    formControlName="email"
+    type="email"
+    placeholder="Email">
+    <i class="bi bi-person-fill"></i>
+  </div>
+  <p class="error-message ps-4 mt-1 mb-2" [ngClass]="invalidEmail()?'visible':'hidden'">
+    <span *ngIf="this.signupForm.get('email').hasError('required')">Email is required</span>
+    <span *ngIf="this.signupForm.get('email').hasError('email')">Email is invalid</span>.
+  </p>
+
+  <div class="form-control">
+    <input
+    type="password"
+    formControlName="password"
+    placeholder="Password">
+    <i class="bi bi-lock-fill"></i>
+  </div>
+  <p
+  class="error-message ps-4 mt-1 mb-2"
+  [ngClass]="invalidPassword()?'visible':'hidden'">
+    Password must contain at least 8 characters.
+  </p>
+
+  <div class="form-control">
+    <input
+    formControlName="repassword"
+    type="password"
+    placeholder="Password again">
+    <i class="bi bi-lock-fill"></i>
+  </div>
+  <p
+  class="error-message ps-4 mt-1 mb-2"
+  [ngClass]="passwordsMatch()?'visible':'hidden'">
+    Passwords do not match.
+  </p>
+
+  <button
+  type="submit"
+  class="submit mb-2 mt-4"
+  *ngIf="!isLoading;else spinner"
+  [disabled]="!signupForm.valid">Sign up</button>
+
+  <ng-template #spinner class="spinner-wrap">
+    <spinner></spinner>
+  </ng-template>
+
+</form>

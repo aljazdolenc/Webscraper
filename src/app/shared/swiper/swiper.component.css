@@ -1,0 +1,47 @@
+@import "~swiper/swiper.min.css";
+@import "~swiper/modules/pagination/pagination.min.css";
+@import "~swiper/swiper-bundle.css";
+
+.swiper {
+  padding-bottom: 2rem;
+}
+
+.swiper * {
+  display: flex;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  height: fit-content;
+  width: 100%;
+  min-width: 190px;
+  max-width: 210px;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.swiper-wrapper {
+  display: flex !important;
+}
+
+.swiper-pagination {
+  justify-content: center;
+}
+
+swiper-card {
+  overflow: hidden;
+}

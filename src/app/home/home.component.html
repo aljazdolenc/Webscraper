@@ -1,0 +1,9 @@
+<mat-sidenav-container autosize >
+  <mat-sidenav #drawer class="example-sidenav" mode="side" [opened]="observeSidebarStatus() | async">
+      <sidebar [ngClass]="(observeSidebarStatus() | async)? 'block': 'none'"></sidebar>
+  </mat-sidenav>
+  <mat-sidenav-content class="px-0 content-container">
+    <navbar></navbar>
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>

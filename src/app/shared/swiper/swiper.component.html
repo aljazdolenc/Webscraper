@@ -1,0 +1,8 @@
+<swiper [config]="config" class="mySwiper">
+
+    <ng-template swiperSlide *ngFor="let item of itemList">
+      <swiper-card  [item]="item"></swiper-card>
+    </ng-template>
+
+</swiper>
+
