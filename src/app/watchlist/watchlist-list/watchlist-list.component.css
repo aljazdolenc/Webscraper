@@ -1,71 +1,61 @@
-.card-header{
-    display: grid;
-    justify-content: space-between;
+.card-watchlist{
+ border-radius: 1.5rem;
+ width: 100%;
 }
-.watchlist-header{
-    font-family:  'Montserrat', sans-serif;
+.card {
+  width: 80%;
+  margin: 0 auto;
+  transition: transform 200ms ease;
+  background: var(--color-swiper-bg);
+  backdrop-filter: var(--color-swiper-blur);
+  -webkit-backdrop-filter: var(--color-swiper-blur);
+  border-radius: 1.5rem;
+  color: var(--color-watchlist-card-text);
+  justify-content: center;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.364);
 }
-.item-search{
-    font-weight: 700;
-    font-size: 1.2rem;
+.list-group-item {
+  padding-top: 1rem;
+  border-radius: 0 0 1.5rem 1.5rem;
+  background: transparent;
 }
-.parameters{
-    font-size: 0.65rem;
+.card-header {
+  background-color: var(--color-swiper-header-bg);
+  color: var(--color-watchlist-card-text);
+  display: grid;
+  justify-content: space-between;
+  border-radius: 1.5rem  1.5rem 0 0;
 }
-
-.actions-container{
-    position: absolute;
-    right: 1rem;
-    font-size: 1.1rem;
+.watchlist-header {
+  font-family: 'Montserrat', sans-serif;
+  color:var(--color-watchlist-header-text);
 }
-.actions-container i{
-    cursor: pointer;
-    transition: all 200ms;
+.item-search {
+  font-weight: 700;
+  font-size: 1.2rem;
+  background-image:var(--color-watchlist-header-text);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
-.actions-container i:hover{
-   font-size: 1.3rem;
+.parameters {
+  font-size: 0.65rem;
+  color:var(--color-watchlist-muted);
 }
-
-.card-title{
-    font-size: 0.85rem;
+.actions-container {
+  position: absolute;
+  right: 1rem;
+  font-size: 1.1rem;
+  color:var(--color-watchlist-actions)
 }
-.card-text{
-    font-size: 0.75rem;
+.actions-container i {
+  cursor: pointer;
+  transition: all 200ms;
+  font-size: 1.1rem;
 }
-
-.btn-all{
-    font-family: 'Montserrat', sans-serif;
-    text-decoration: none;
-    color: black;
-    border-radius: 7px;
-    font-size: 0.7rem;
-    border: 1px solid black;
-    transition: all 50ms;
+hr{
+  background-color: var(--color-watchlist-hr);
 }
-.btn-all:hover{
-    transform: scale(1.03);
-
+app-swiper{
+  width: 100%;
+  height: 100%;
 }
-
-.card-watchlist:hover {
-    box-shadow: 0 0 11px rgba(33,33,33,.3); 
-  }
-
-  .btn-visit{
-    font-family: 'Montserrat', sans-serif;
-    text-decoration: none;
-    color: black;
-    border-radius: 7px;
-    font-size: 0.7rem;
-    border: 1px solid black;
-    transition: all 50ms; 
-    max-width: fit-content;
-    margin: 0 auto;
-  }
-  .btn-visit:hover{
-      background-color: black;
-      color: white;
-  }
-  .card-body{
-      display: grid;
-  }

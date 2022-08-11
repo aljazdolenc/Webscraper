@@ -1,20 +1,25 @@
-
 <nav class="navigation-bar">
 
-<div> {{headingText}}</div>
-<div 
-class="mode-container"
-[class.night]="mode==='night'">
-    <i 
-    class="bi bi-brightness-high-fill"
-    (click)="changeMode('day')"
-    [class.active-day]="mode==='day'"
-    [class.default]="defaultMode"></i>
-    <i 
-    class="bi bi-moon-fill active"
-    (click)="changeMode('night')"
-    [class.active-night]="mode==='night'"
-    [class.default]="defaultMode"></i> 
- </div>
-  
+  <div class="left-section ps-4">
+    <i class="bi bi-list" (click)="openSidebar()" [ngClass]="(sidebarStatus$ | async)? 'none':'block'"></i>
+    <div class="pt-1 ms-3">
+      <div class="path-name"> {{headingText}} </div>
+      <div class="date"><Table>Monday, 10th September 2020</Table></div>
+    </div>
+  </div>
+
+  <div class="right-section">
+    <div class="user-welcome me-2">Hi, <span class="name">Aljaz</span></div>
+    <div class="user-icon me-3"></div>
+    <div class="mode-container me-3"
+    [class]="darkMode?'night':'day'"
+    (click)="changeMode()">
+    <i class="bi bi-brightness-high-fill"
+    [hidden]="!darkMode"></i>
+    <i class="bi bi-moon-fill "
+    [hidden]="darkMode"
+       ></i>
+    </div>
+  </div>
+
 </nav>

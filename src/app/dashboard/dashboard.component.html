@@ -1,35 +1,12 @@
-<div class="deals-container">
-  
-      <div 
-      class="
-      row 
-      row-cols-2 
-      row-cols-sm-2 
-      row-cols-md-2 
-      row-cols-lg-3 
-      row-cols-xl-4  
-      card-container 
-      mx-5
-      p-3
-      m-3
-      gx-5">
-        <div class="col mb-4 p-0 p-1"
-        style="display: flex;justify-content:center" 
-        *ngFor="let item of itemsList">
-          <div class="card" >
-              <img [src]="item.imageUrl" class="card-img-top" alt="...">
-              <hr>
-              <div class="card-body">
-                <h5 
-                class="card-title">{{item.name}}</h5>
-                <p class="card-text text-center">{{item.price}}$</p>
-                <a 
-                [href]="item.itemUrl" 
-                class="btn-buy text-center py-1 mx-3">BUY NOW</a>
-              </div>
-            </div>
-        </div>
-  
-      </div>
+<div class="container p-0">
+  <div class="mx-5 wrapper my-3">
+    <div class="header-background">
+      <span class="header">Amazon Deals</span>
+    </div>
+    <div class="card-container  p-3 pt-0 ">
+      <hr>
+      <app-swiper [itemList]="itemsList"></app-swiper>
+    </div>
+  </div>
 </div>
 

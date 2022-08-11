@@ -8,14 +8,10 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
   styleUrls: ['./sidebar.component.css']
 })
 export class SidebarComponent implements OnInit,OnDestroy {
-
-  /* Alert Counters */
   dashboardCounter:number=0;
   notificationCoutner:number=0;
   accountCounter:number=0
-  //Active link
   activeLink:string='';
-  // Subscriptions
   activeLinkSub:Subscription;
 
   constructor(private sidebarService:SidebarService) { }
@@ -27,9 +23,11 @@ export class SidebarComponent implements OnInit,OnDestroy {
       this.activeLink=activeLink;
     })
   }
-
-  clickedLink(linkName:string){
+  public clickedLink(linkName:string){
     this.sidebarService.updateActiveLink(linkName);
+  }
+  public closeSidebar(){
+    this.sidebarService.closeSidebar();
   }
   ngOnDestroy(): void {
     this.activeLinkSub.unsubscribe()

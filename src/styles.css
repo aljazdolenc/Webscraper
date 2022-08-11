@@ -10,39 +10,196 @@
 }
 
 body{
-    background-color: rgb(242, 242, 242);
-    --color-purple:rgb(116, 47, 250);
-    --color-green:#00fd61;
-    --color-black: #000000;
+  /* Body properties */
+    background-image: url('./assets/images/bg-wave-dark\ copy.svg');
+    background-color:rgb(228, 235, 243);
+    background-repeat:no-repeat;
+    background-size:cover;
 
-    --color-text: black;
+    /* Main colors */
+    --color-text:black;
+    --color-main-grad:linear-gradient(301deg, rgb(86, 141, 252) 0%, rgb(26, 98, 223) 50%, rgb(46, 78, 255) 100%);
+
+    /* Swiper */
+    --color-swiper-bg:rgba(208, 208, 208, 0.5);
+    --color-card-bg: rgba(255, 255, 255, 0.8);
+    --color-swiper-blur: blur(.2188rem);
+    --color-swiper-header-bg:rgba(255, 255, 255, 0.75);
+    --blur-filter-card: blur(.2188rem);
+    --color-card-price:rgb(45, 45, 45);
+    --color-card-header:black;
+    --color-card-date:rgb(66, 71, 81);
+    --color-card-border:1px solid rgb(227, 227, 227);
+    --brightness-img:brightness(100%);
+
+    /* Scrollbar */
+    --color-scrollbar-bg: #545454;
+
+    /* Button */
+    --color-button-text:white;
+    --color-button-bg: linear-gradient(156deg, rgba(255, 0, 179, 0.74) 0%, rgba(0, 98, 255, 0.74)100%);
+    --color-button-bg-hover: linear-gradient(156deg, rgba(255, 0, 179, 0.914) 0%, rgba(0, 98, 255, 0.912)100%);
+    --color-btn-bg:  linear-gradient(301deg, rgba(86,246,252,0.7) 0%, rgba(26,182,223,0.7) 50%, rgba(73,101,255,0.7) 100%);
+    --color-btn-bg-hover: linear-gradient(301deg, rgba(86,246,252,1) 0%, rgba(26,182,223,1) 50%, rgba(73,101,255,1) 100%);
+
     /*Sidebar colors*/
-    --color-scrapy:rgb(116, 47, 250);
-    --color-sidebar-bg:white;
-    --color-sidebar-links:black;
-    --color-sidebar-links-active:rgb(116, 47, 250);
-    --color-sidebar-links-active-bg:rgb(241, 235, 253);
-    --color-notification-icon-text:rgb(245,245,245);
-    --color-notification-icon-bg:rgb(242, 84, 111);
-    /* Navbar colors */
-    --color-navbar-bg:#00fd61;
-    --color-navbar-header:black;
-    
+    --color-sidebar-bg:rgba(255,255,255,1);
+    --url-logo:url('../../assets/images/Logo-web.png');
+    --color-sidebar-links: rgb(39, 40, 41);
+    --color-siderbar-border:rgba(240, 246, 252,1);
+    --color-sidebar-links-active:rgb(255, 255, 255);
+    --color-sidebar-links-active-bg:linear-gradient(to right, rgba(53, 50, 255,0.9)0%,#72ccff  100%);
+    --color-notification-icon-bg:#f6808e;
+    --color-sidebar-hr:linear-gradient(301deg, rgba(86, 119, 252, 0.5) 0%, rgba(26,182,223,0.5) 50%, rgba(64, 156, 255, 0.5) 100%);
+
+    /* Navbar*/
+    --color-navbar-bg:rgba(255, 255, 255, 0.9);
+    --color-navbar-header:rgb(245, 245, 245);
+    --color-navbar-path:rgb(0, 38, 255);
+    --color-navbar-date:rgb(70, 74, 81);
+    --color-navbar-welcome:rgb(66, 71, 81);
+    --color-navbar-name:linear-gradient(301deg, rgb(86, 141, 252) 0%, rgb(26, 98, 223) 50%, rgb(46, 78, 255) 100%);
+
+    /* Home */
+    --color-home-bg:none;
+
+   /* Dashboard */
+   --color-dashboard-bg: rgba(208, 208, 208, 0.5);
+   --color-dashboard-card-bg: rgba(255, 255, 255, 0.8);
+   --color-dashboard-header-bg:rgba(255, 255, 255, 0.75);
+   --color-dashboard-header-text: linear-gradient(156deg, rgb(255, 0, 179) 0%, rgb(0, 98, 255)100%);
+   --box-shadow-dashboard-card: 0 8px 16px 0 rgba(31, 95, 135, 0.37);
+   --color-dashboard-btn-bg: linear-gradient(156deg, rgba(255, 0, 179, 0.74) 0%, rgba(0, 98, 255, 0.74)100%);
+   --color-dashboard-btn-bg-hover: linear-gradient(156deg, rgba(255, 0, 179, 0.914) 0%, rgba(0, 98, 255, 0.912)100%);
+
+    /* Add target */
+    --color-add-bg:  rgba(255, 255, 255, 0.35);
+    --color-input-bg: rgba(255, 255, 255, 0.8);
+    --color-input-border:rgb(255, 255, 255, 0.4);
+    --color-add-header: rgb(0, 42, 250);
+    --color-add-input: rgb(38, 127, 251);
+    --filter-add-input: blue(5px);
+    --color-add-checkbox-text: white;
+    /* Settings */
+    --color-settings-bg: rgba(255, 255, 255, 0.35);
+    --color-settings-header: rgb(0, 42, 250);
+    --color-settings-input: rgb(116, 100, 198);
+    --color-settings-input-border:rgb(255, 255, 255, 0.4);
+    --color-settings-input-bg: rgba(255, 255, 255, 0.8);
+    --color-settings-input-label: rgb(27, 27, 27);
+    --color-settings-checkbox-text: white;
+    --box-shadow-settings-container:0 1px 1px rgba(0,0,0,0.12),
+    0 2px 2px rgba(0,0,0,0.12),
+    0 4px 4px rgba(0,0,0,0.12),
+    0 8px 8px rgba(0,0,0,0.12),
+    0 16px 16px rgba(0,0,0,0.12);
+
+    /* Notifications */
+    --color-notification-item-bg-hover: rgba(0, 0, 0, 0.55);
+    --color-notification-item-border: rgba(0, 0, 0, 0.12);
+    --color-notification-item-hover-border: rgba(115, 115, 115, 0.088);
+
+    /* Watchlist */
+    --color-watchlist-bg: rgba(208, 208, 208, 0.5);
+    --color-watchlist-header-bg: rgba(255, 255, 255, 0.5);
+    --color-watchlist-header-text: rgb(48 54 255);
+    --color-watchlist-muted: rgb(38, 40, 45);
+    --color-watchlist-actions: black;
+    --color-watchlist-hr: rgba(100, 100, 100, 0.7);
+    --color-watchlist-header-text: linear-gradient(156deg, rgb(255, 0, 179) 0%, rgb(0, 98, 255)100%);
 }
 body.dark-theme{
-    background-color:rgba(41, 32, 89);
+    /* Body properties */
+    background-image: url('./assets/images/bg-wave-dark.svg');
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-color:rgb(20, 20, 22);
+
+     /* Main colors */
     --color-text:white;
-    /*Sidebar colors*/
-    --color-scrapy:rgb(235, 67, 215);
-    --color-sidebar-bg:linear-gradient(to bottom right,RGB(47, 10, 103),rgb(84, 41, 148));
+    --color-main-grad:linear-gradient(to right, #8b33c5, #15a0e1);
+
+    /* Swiper */
+    --color-swiper-bg:rgba(0, 0, 0, 0.5);
+    --color-card-bg: rgba(15, 15, 15, 0.75);
+    --color-swiper-blur: blur(.2188rem);
+    --color-swiper-header-bg:rgba(0,0,0,0.5);
+    --blur-filter-card: blur(.2188rem);
+    --color-card-price:rgb(224, 224, 224);
+    --color-card-header:white;
+    --color-card-date:rgb(232, 232, 232);
+    --color-card-border:1px solid black;
+    --brightness-img:brightness(80%);
+
+    /* Scrollbar */
+    --color-scrollbar-bg: rgba(15, 15, 15, 0.6);
+
+    /* Button */
+    --color-button-text:white;
+    --color-btn-bg: linear-gradient(to right, rgba(139, 51, 197, 0.45), rgba(21, 160, 225,0.45));
+    --color-btn-bg-hover: linear-gradient(to right, rgba(139, 51, 197, 0.7), rgba(21, 160, 225,0.7));
+    --color-btn-shadow-hover:#5E5DF0 0 10px 20px -10px;
+
+
+    /*Sidebar*/
+    --color-sidebar-bg:rgba(20, 20, 22,0.93);
+    --url-logo:url('../../assets/images/Logo-web-night.png');
     --color-sidebar-links: white;
-    --color-sidebar-links-active:rgb(235, 67, 215);
-    --color-sidebar-links-active-bg:rgb(251, 217, 247);
+    --color-sidebar-links-active:whitesmoke;
+    --color-sidebar-links-active-bg: linear-gradient(to right, rgba(139, 51, 197, 0.5) 60%, rgba(21, 160, 225,0.5));
     --color-notification-icon-bg:#f6808e;
-    /* Navbar colors */
-    --color-navbar-header:white;
-    --color-navbar-bg:;
+    --color-sidebar-hr:linear-gradient(to right, rgba(139, 51, 197, 0.7) 60%, rgba(21, 160, 225,0.7));
+
+    /* Navbar */
+    --color-navbar-header:rgb(109, 139, 248);
+    --color-navbar-bg:rgba(27, 24, 33, 0.95);
+    --color-navbar-border:1px solid rgba(227, 227, 227, 0.364);
+    --color-navbar-path:rgb(102, 135, 255);
+    --color-navbar-date:rgb(137, 149, 170);
+    --color-navbar-welcome:white;
+    --color-navbar-name:linear-gradient(to right, #c165ff, #50c8ff);
+
+    /* Home */
+    --color-home-bg:rgba(20, 21, 23, 0.3);
+
+    /* Add target */
+    --color-add-bg: rgba(0, 0, 0, 0.7);
+    --color-input-bg: rgba(40, 45, 67, 0.8);
+    --color-input-border:rgba(40, 45, 67, 1);
+    --color-add-header: rgb(132, 158, 255);
+    --color-add-input: rgb(116, 100, 198);
+
+    /* Settings */
+    --color-settings-bg: rgba(0, 0, 0, 0.7);
+    --color-settings-header: rgb(132, 158, 255);
+    --color-settings-input: rgb(116, 100, 198);
+    --color-settings-input-border:rgba(40, 45, 67, 1);
+    --color-settings-input-label:#888888;
+    --color-settings-input-bg: rgba(40, 45, 67, 0.8);
+    --color-settings-checkbox-text: rgb(151, 160, 169);
+
+    /* Dashboard */
+    --color-dashboard-bg: rgba(0, 0, 0, 0.249);
+    --color-dashboard-card-bg: rgba(8, 7, 17,0.1);
+    --color-dashboard-card-text: white;
+    --box-shadow-dashboard-card: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    --blur-filter-dashboard-card: blur(.2188rem);
+    --color-dashboard-header-text: linear-gradient(156deg, rgb(255, 0, 179) 0%, rgb(0, 98, 255)100%);
+
+    /* Notifications */
+    --color-notification-item-bg: rgba(0, 0, 0, 0.4);
+    --color-notification-item-bg-hover: rgba(0, 0, 0, 0.55);
+
+    /* Watchlist */
+    --color-watchlist-bg: rgba(0, 0, 0, 0.25);
+    --color-watchlist-actions: #d8d8d8;
+    --color-watchlist-muted: #e0e0e0;
+    --color-watchlist-header-text: #8f6cff;
+    --color-watchlist-header-bg: rgba(0, 0, 0, 0.2);
+    --color-watchlist-hr: rgba(100, 100, 100, 0.7);
+    --color-watchlist-header-text: linear-gradient(156deg, rgb(255, 0, 179) 0%, rgb(0, 98, 255)100%);
 }
+
 .body-container{
     height: 100vh;
     width: 100vw;
@@ -53,3 +210,6 @@ body.dark-theme{
 .content-container{
     height: 100vh;
 }
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

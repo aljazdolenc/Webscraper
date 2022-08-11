@@ -1,26 +1,101 @@
-.container{
-    width: 80%;
-    border-radius: 10px;
-    background-color: rgba(255, 255, 255, 0.7);
-    box-shadow: 0 0 11px rgba(33,33,33,.3); 
-    position: relative;
+.container {
+  width: 70%;
+  max-width: 700px;
+  background-color: var(--color-settings-bg);
+  position: relative;
+  color: white;
+  backdrop-filter: var(--blur-filter-card);
+  -webkit-backdrop-filter:var(--blur-filter-card);
+  border-radius: 1rem;
+  box-shadow:var(--box-shadow-settings-container);
+  border: 2px solid rgba(255, 255, 255, 0.1);
 }
 
+.min-container,
+.max-container,
+.min,
+.max {
+  width: 5rem;
+}
 
-.min-container, .max-container{
-    width: 5rem;
+.btn-primary {
+  position: absolute;
+  right: 2rem;
+  bottom: 1.5rem;
 }
-.min, .max{
-    width: 5rem;
+
+.bold {
+  font-weight: bold;
 }
-.btn-primary{
-    position: absolute;
-    right: 2rem;
-    bottom:1.5rem;
+
+input[type=password] {
+  background-color: var(--color-settings-input-bg);
+  border-color: var(--color-settings-input-border);
+  border-radius: 1.5rem;
+  backdrop-filter: var(--filter-add-input);
+  color: var(--color-settings-input);
+  font-weight: 500;
+  margin-bottom: 1rem;
+  width: 75%;
 }
-.bold{
-    font-weight: bold;
+
+input[type=password]:focus,
+input[type=password]:active {
+  background-color: var(--color-settings-input-bg);
+  border-color: var(--color-settings-input-border);
+  color: var(--color-settings-input);
 }
-.text-small{
-    font-size: 0.8rem;
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=checkbox] {
+  background-color: var(--color-settings-input-bg);
+}
+
+.header {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.05rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--color-settings-header)
+}
+
+.checkbox-text {
+  color: var(--color-settings-checkbox-text);
+  font-size: 0.9rem;
+}
+.input-label {
+  font-size: 1rem;
+  color:var(--color-settings-input-label);
+}
+.submit-btn {
+  font-family: 'Montserrat', sans-serif;
+  text-decoration: none;
+  color: var(--color-button-text);
+  background: var(--color-btn-bg);
+  border-radius: 1rem;
+  position: absolute;
+  right: 3rem;
+  bottom: 2rem;
+  font-size: 1rem;
+  min-width: 8rem;
+  transition: all 200ms ease;
+  padding:0.25rem 0;
+  border: none;
+}
+.submit-btn:hover {
+  transform: translateY(-2px);
+  box-shadow:var(--color-btn-shadow-hover);
+  background-image: var(--color-btn-bg-hover);
+}
+.submit-btn:focus {
+  box-shadow:var(--color-btn-shadow-hover);
+}
+.submit-btn:active {
+  box-shadow:none;
+  transform: translateY(2px);
 }

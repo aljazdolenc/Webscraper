@@ -1,46 +1,45 @@
-<div class="container my-5 pt-2 pb-5">
-
+<div class="container my-5 pt-2 pb-5 ps-5">
     <form>
         <!-- Search Parameters -->
-        <div class="form-group pt-2 pb-4">
+        <div class="form-group mt-4 pb-4">
             <label for="formGroupInput">
-                <span class="bold mb-5">Update Password</span>
+                <span class=" mb-5 header">Update Password</span>
             </label>
        <br>
             <form class="mt-2">
-                <small class="text-muted">Current password</small>
-                <input type="text" class="form-control mt-1" id="formGroupInput">
-    
-                <small class="text-muted">New password</small>
-                <input type="text" class="form-control mt-1" id="formGroupInput">
-    
-                <small class="text-muted">Re-enter new password</small>
-                <input type="text" class="form-control mt-1" id="formGroupInput">
+                <small class="input-label ms-2">Current password</small>
+                <input
+                type="password"
+                class="form-control mt-1"
+                id="formGroupInput">
 
+                <small class="input-label ms-2">New password</small>
+                <input
+                type="password"
+                class="form-control mt-1"
+                id="formGroupInput">
 
-
-
+                <small class="input-label ms-2">Re-enter new password</small>
+                <input
+                type="password"
+                class="form-control mt-1 mb-0"
+                id="formGroupInput">
             </form>
         </div>
-
-
         <!-- Notifications -->
         <div class="form-group">
-            <label class="bold pb-2">Notification preferences</label>
-            <div class="form-check">
-                <input class="form-check-input position-static " type="checkbox" id="blankCheckbox" value="option1"
-                    aria-label="..."> <span class="text-small">Email</span>
-            </div>
-            <div class="form-check">
-                <input class="form-check-input position-static" type="checkbox" id="blankCheckbox" value="option1"
-                    aria-label="..."> <span class="text-small">
-                    Browser Notifications
-                </span>
+            <label class=" mb-3 header"> Notification Preferences</label>
+            <div class="form-check mb-3 ms-2"
+            *ngFor="let notification of notificationsPreferences; let i = index">
+                <input
+                class="form-check-input position-static"
+                type="checkbox"
+                id="blankCheckbox"
+                value="option{{i+1}}">
+                <span class="checkbox-text">{{notification}}</span>
             </div>
         </div>
-
         <!-- Button Submit -->
-        <button type="submit" class="btn btn-primary">Submit</button>
-
+        <button type="submit" class="submit-btn">Submit</button>
     </form>
 </div>

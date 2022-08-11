@@ -1,82 +1,52 @@
 <div class="container my-5 pt-3 pb-5 ps-5">
-
-    <form>
-        <!-- Search Parameters -->
-        <div class="form-group pt-3 ">
-            <label for="formGroupInput">Search parameters</label>
-            <input type="text" class="form-control mt-1 search-input" id="formGroupInput" placeholder='"Gaming Pc"'>
+  <form>
+    <!-- Search Parameters -->
+    <div class="form-group pt-3 ">
+      <label for="formGroupInput" class="header">Search parameters</label>
+      <input type="text" class="form-control mt-1 search-input" id="formGroupInput" placeholder='"Gaming Pc"'>
+    </div>
+    <!-- Price range -->
+    <div class="form-group mt-3">
+      <label for="formGroupInput2" class="header">Price range</label>
+      <form>
+        <div class="row min-max-container mt-1">
+          <div class="min">
+            <input type="number" class="form-control min-container  col-4" placeholder="Min">
+          </div>
+          <div class="col-4 max-container ms-3">
+            <input type="number" class="form-control max" placeholder="Max">
+          </div>
+          <div class="container-fluid"></div>
         </div>
-        <!-- Price range -->
-        <div class="form-group mt-3">
-            <label for="formGroupInput2">Price range</label>
-            <form>
-                <div class="row min-max-container mt-1">
-                    <div class="min">
-                        <input type="text" class="form-control min-container  col-4" placeholder="Min">
-                    </div>
-                    <div class="col-4 max-container ms-3">
-                        <input type="text" class="form-control max" placeholder="Max">
-                    </div>
-                    <div class="container-fluid"></div>
-                </div>
-            </form>
+      </form>
+    </div>
+    <!-- Location radios -->
+    <div class="form-group mt-">
+      <label for="formGroupInput2" class="header">Location</label>
+      <form>
+        <div class="col-sm-10">
+          <div class="form-check" *ngFor="let item of locationOptions; let i = index">
+            <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios{{i+1}}" value=item
+              [checked]="i==1?true:false">
+            <label class="form-check-label" for="gridRadios">{{item}}</label>
+          </div>
         </div>
-        <!-- Location radios -->
-        <div class="form-group mt-3">
-            <label for="formGroupInput2">Location</label>
-            <form>
-                <div class="col-sm-10">
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1"
-                            checked>
-                        <label class="form-check-label" for="gridRadios1">
-                            All
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
-                        <label class="form-check-label" for="gridRadios2">
-                            Europe
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3" value="option3">
-                        <label class="form-check-label" for="gridRadios3">
-                            Germany
-                        </label>
-                    </div>
-                </div>
-            </form>
+      </form>
+    </div>
+    <!-- Offer type -->
+    <div class="form-group mt-3 mb-5">
+      <label for="formGroupInput2" class="header">Offer type</label>
+      <form>
+        <div class="col-sm-10">
+          <div class="form-check" *ngFor="let item of offerOptions; let i = index">
+            <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios{{i+1}}" value=item
+              [checked]="i==1?true:false">
+            <label class="form-check-label" for="gridRadios">{{item}}</label>
+          </div>
         </div>
-        <!-- Offer type -->
-        <div class="form-group mt-3 mb-5">
-            <label for="formGroupInput2">Offer type</label>
-            <form>
-                <div class="col-sm-10">
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1"
-                            checked>
-                        <label class="form-check-label" for="gridRadios1">
-                            All
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
-                        <label class="form-check-label" for="gridRadios2">
-                            New
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3" value="option3">
-                        <label class="form-check-label" for="gridRadios3">
-                            Used
-                        </label>
-                    </div>
-                </div>
-            </form>
-        </div>
-        <!-- Button Submit -->
-        <button type="submit" class="btn btn-primary">Submit</button>
-
-    </form>
+      </form>
+    </div>
+    <!-- Button Submit -->
+    <button type="submit" class="submit-btn">Submit</button>
+  </form>
 </div>

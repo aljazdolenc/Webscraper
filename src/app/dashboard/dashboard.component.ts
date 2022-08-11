@@ -7,8 +7,7 @@ import { DashboardService } from './dashboard.service';
   styleUrls: ['./dashboard.component.css']
 })
 export class DashboardComponent implements OnInit {
-  itemsList:CardDeals[]=[]
-  
+  public itemsList:CardDeals[]=[]
 
   constructor(
     private dashboardService:DashboardService) { }

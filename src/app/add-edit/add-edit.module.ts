@@ -1,6 +1,6 @@
+import { CommonModule } from '@angular/common';
 import { AddEditRoutingModule } from './add-edit-routing.module';
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import { AddEditComponent } from './add-edit/add-edit.component';
 import { RouterModule } from '@angular/router';
 
@@ -12,8 +12,8 @@ import { RouterModule } from '@angular/router';
   ],
   imports: [
     RouterModule,
-    CommonModule,
-    AddEditRoutingModule
+    AddEditRoutingModule,
+    CommonModule
   ]
 })
 export class AddEditModule { }

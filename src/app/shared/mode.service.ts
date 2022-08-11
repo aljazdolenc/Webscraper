@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 Injectable({providedIn: 'root'})
 export class ModeService{
-     isDarkMode= new BehaviorSubject<boolean>(false);
+     isDarkMode= new BehaviorSubject<boolean>(true);
      isDarkModeState= false;
 
      ChangeMode(){

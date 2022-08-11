@@ -3,6 +3,7 @@ import { CommonModule } from "@angular/common";
 import { NgModule } from "@angular/core";
 import { RouterModule } from "@angular/router";
 import { DashboardRoutingModule } from "./dashboard-routing.module";
+import { SwiperToolModule } from '../shared/swiper/swiper.module';
 
 
 @NgModule({
@@ -12,7 +13,8 @@ import { DashboardRoutingModule } from "./dashboard-routing.module";
     imports: [
         RouterModule,
         CommonModule,
-        DashboardRoutingModule
+        DashboardRoutingModule,
+        SwiperToolModule
     ],
     bootstrap: [DashboardModule]
 })

@@ -1,44 +1,23 @@
+import { AuthGuard } from './auth/auth.guard';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/daily-deals', pathMatch: 'full' },
+  { path: '', redirectTo: 'app', pathMatch: 'full' },
   {
-    path: 'daily-deals',
+    path: 'app',
+    canActivate: [AuthGuard],
     loadChildren: () =>
-      import('./dashboard/dashboard.module')
-        .then(m => m.DashboardModule)
+      import('./home/home.module')
+        .then(m => m.HomeModule)
   },
   {
-    path: 'notifications',
+    path: 'auth',
     loadChildren: () =>
-      import('./notifications/notifications.module')
-        .then(m => m.NotificationsModule)
+      import('./auth/auth.module')
+        .then(m => m.AuthModule)
   },
-  {
-    path: 'watchlists',
-    loadChildren: () =>
-      import('./watchlist/watchlist.module')
-        .then(m => m.WatchlistModule)
-  },
-  {
-    path: 'edit-watchlist',
-    loadChildren: () =>
-      import('./add-edit/add-edit.module')
-        .then(m => m.AddEditModule)
-  },
-  {
-    path: 'add-watchlist',
-    loadChildren: () =>
-      import('./add-edit/add-edit.module')
-        .then(m => m.AddEditModule)
-  },
-  {
-    path: 'settings',
-    loadChildren: () =>
-      import('./settings/settings.module')
-        .then(m => m.SettingsModule)
-  }
+  { path: '**', redirectTo: 'app'},
 
 ];
 

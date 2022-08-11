@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AddEditComponent implements OnInit {
 
+  public offerOptions:string[]=['All','New','Used'];
+  public locationOptions:string[]=['All','Europe','Germany'];
   constructor() { }
 
   ngOnInit(): void {
